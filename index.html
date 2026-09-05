@@ -20,8 +20,8 @@
     }
 
     :root {
-      --main-ink: #050505;
-      --paper-dot: #d8d8d8;
+      --main-ink: #000000;
+      --paper-dot: #cfcfcf;
     }
 
     body {
@@ -33,13 +33,12 @@
       font-family: 'Finger Paint', 'Permanent Marker', cursive, sans-serif;
       position: relative;
       background-image: radial-gradient(var(--paper-dot) 1px, transparent 1px);
-      background-size: 20px 20px;
+      background-size: 22px 22px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
 
-    /* Sketch SVG Filter for Mobile & Desktop */
+    /* Sketch SVG Filter */
     .sketch-effect {
       filter: url(#rough-filter);
     }
@@ -47,13 +46,12 @@
     /* Layout Wrapper */
     .canvas-container {
       width: 100%;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
       min-height: 100dvh;
-      padding: 12px 18px 24px 18px;
+      padding: 16px 24px 30px 24px;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
       position: relative;
     }
 
@@ -63,8 +61,8 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
-      padding-top: 4px;
-      padding-bottom: 8px;
+      padding-top: 8px;
+      padding-bottom: 6px;
     }
 
     .brand-container {
@@ -77,23 +75,23 @@
     .brand-top-row {
       display: flex;
       align-items: center;
-      gap: clamp(6px, 1.8vw, 12px);
+      gap: clamp(8px, 2vw, 14px);
     }
 
     .brand-azu {
-      font-size: clamp(2rem, 8.5vw, 4.2rem);
+      font-size: clamp(2.4rem, 8vw, 4.4rem);
       line-height: 0.95;
       font-weight: 900;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       color: var(--main-ink);
       transform: rotate(-1deg);
       text-shadow: 1px 1px 0px #333;
     }
 
     .brand-logo-circle {
-      width: clamp(42px, 13vw, 70px);
-      height: clamp(42px, 13vw, 70px);
-      border: clamp(2.5px, 0.8vw, 4.5px) solid var(--main-ink);
+      width: clamp(48px, 12vw, 72px);
+      height: clamp(48px, 12vw, 72px);
+      border: clamp(3px, 0.8vw, 5px) solid var(--main-ink);
       border-radius: 50% 46% 52% 48% / 48% 52% 48% 52%;
       display: flex;
       flex-direction: column;
@@ -104,7 +102,7 @@
     }
 
     .logo-inner-text {
-      font-size: clamp(0.7rem, 2.5vw, 1.2rem);
+      font-size: clamp(0.85rem, 2.4vw, 1.25rem);
       font-weight: 900;
       line-height: 0.85;
       letter-spacing: -0.5px;
@@ -122,7 +120,7 @@
     }
 
     .brand-sci {
-      font-size: clamp(1.8rem, 8vw, 3.8rem);
+      font-size: clamp(2.2rem, 7.5vw, 4rem);
       line-height: 0.95;
       font-weight: 900;
       letter-spacing: 1px;
@@ -131,35 +129,37 @@
       text-shadow: 1px 1px 0px #333;
     }
 
-    /* Hand-drawn Divider Line across the screen */
+    /* Hand-drawn Divider Line */
     .sketch-divider {
       width: 100%;
-      height: clamp(10px, 2.5vw, 20px);
+      height: clamp(12px, 2.5vw, 20px);
       margin-top: 4px;
-      margin-bottom: clamp(16px, 4vw, 40px);
+      margin-bottom: clamp(20px, 4vh, 45px);
     }
 
-    /* Main Body Grid */
+    /* Main Content Container */
     .main-grid {
       flex: 1;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: clamp(10px, 3vw, 40px);
-      padding: 0 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: clamp(25px, 5vh, 50px);
+      padding: 0 6px;
     }
 
     /* Left Hand-written Typography */
     .sketch-text-column {
       display: flex;
       flex-direction: column;
-      gap: clamp(4px, 1.5vw, 10px);
+      gap: clamp(4px, 1.5vw, 8px);
+      width: 100%;
+      text-align: left;
     }
 
     .sketch-line {
-      font-size: clamp(1.85rem, 7.2vw, 4.8rem);
+      font-size: clamp(2.4rem, 8.5vw, 4.8rem);
       font-weight: 900;
-      line-height: 1.12;
+      line-height: 1.15;
       color: var(--main-ink);
       transform-origin: left center;
       display: block;
@@ -173,7 +173,7 @@
 
     .line-to {
       transform: rotate(1deg);
-      margin-left: clamp(4px, 1.5vw, 12px);
+      margin-left: clamp(6px, 2vw, 14px);
     }
 
     .line-azuscince {
@@ -183,7 +183,7 @@
 
     .line-student {
       transform: rotate(1.5deg);
-      margin-left: clamp(6px, 1.8vw, 14px);
+      margin-left: clamp(8px, 2.2vw, 16px);
     }
 
     .line-patrol {
@@ -191,56 +191,69 @@
       letter-spacing: 1px;
     }
 
-    /* Right Action Column with Hand-drawn Clickable Arrow */
+    /* Action Column: Arrow placed directly UNDER the text on Mobile */
     .sketch-action-column {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      position: relative;
       width: 100%;
+      padding-top: 10px;
     }
 
     .arrow-button {
       background: transparent;
       border: none;
       cursor: pointer;
-      padding: clamp(8px, 2vw, 20px);
+      padding: 10px;
       outline: none;
       transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       width: 100%;
-      max-width: 380px;
+      max-width: 340px;
     }
 
     .arrow-button:hover, .arrow-button:focus {
-      transform: scale(1.06) translateX(8px);
+      transform: scale(1.06) translateX(6px);
     }
 
     .arrow-button:active {
-      transform: scale(0.95) translateX(12px);
+      transform: scale(0.96) translateX(10px);
     }
 
     .arrow-svg {
       width: 100%;
+      max-width: 280px;
       height: auto;
-      max-height: 160px;
       filter: drop-shadow(1px 2px 0px rgba(0,0,0,0.25));
     }
 
     .arrow-hint {
-      font-family: 'Caveat', 'Gochi Hand', cursive;
-      font-size: clamp(1.1rem, 3.8vw, 1.8rem);
-      color: #333;
-      transform: rotate(-2deg);
+      font-family: 'Cairo', 'Caveat', cursive;
+      font-size: clamp(1.1rem, 4vw, 1.6rem);
+      font-weight: 700;
+      color: #222;
       text-align: center;
-      line-height: 1.2;
+      letter-spacing: 0.5px;
     }
 
-    /* Interactive Hand-Drawn Sketch Modal (Opens when arrow is clicked) */
+    /* Desktop View: Keep side-by-side if screen is wide */
+    @media (min-width: 820px) {
+      .main-grid {
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        align-items: center;
+        gap: 30px;
+      }
+      .sketch-action-column {
+        padding-top: 0;
+      }
+    }
+
+    /* Interactive Hand-Drawn Sketch Modal (NO EMOJIS) */
     .sketch-modal-overlay {
       position: fixed;
       inset: 0;
@@ -267,7 +280,7 @@
       border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
       max-width: 480px;
       width: 100%;
-      padding: clamp(20px, 5vw, 32px);
+      padding: clamp(22px, 5vw, 32px);
       box-shadow: 8px 10px 0px var(--main-ink);
       position: relative;
       transform: rotate(-1deg) scale(0.9);
@@ -302,10 +315,10 @@
 
     .modal-subtitle {
       font-family: 'Cairo', 'Caveat', cursive;
-      font-size: clamp(0.95rem, 3vw, 1.2rem);
+      font-size: clamp(0.95rem, 3vw, 1.15rem);
       text-align: center;
       margin-bottom: 20px;
-      color: #444;
+      color: #333;
     }
 
     .sketch-input-group {
@@ -347,7 +360,7 @@
       background: var(--main-ink);
       color: #ffffff;
       font-family: 'Cairo', 'Permanent Marker', cursive;
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       font-weight: 900;
       border: 3px solid var(--main-ink);
       border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
@@ -386,41 +399,11 @@
       background: #000;
       color: #fff;
     }
-
-    /* Small Screen / Mobile Layout Optimizations */
-    @media (max-width: 640px) {
-      .canvas-container {
-        padding: 8px 12px 18px 12px;
-      }
-      .main-grid {
-        /* Keep it side-by-side or well proportioned */
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 8px;
-        align-items: center;
-        margin-top: 10px;
-      }
-      .sketch-line {
-        font-size: clamp(1.4rem, 6.2vw, 2.2rem);
-      }
-      .arrow-svg {
-        max-height: 110px;
-      }
-      .brand-azu {
-        font-size: clamp(1.6rem, 7vw, 2.4rem);
-      }
-      .brand-sci {
-        font-size: clamp(1.4rem, 6.5vw, 2.2rem);
-      }
-      .brand-logo-circle {
-        width: clamp(34px, 10vw, 48px);
-        height: clamp(34px, 10vw, 48px);
-      }
-    }
   </style>
 </head>
 <body class="sketch-effect">
 
-  <!-- SVG Filter to create real rough charcoal / crayon texture on all elements -->
+  <!-- SVG Filter to create rough charcoal/crayon texture -->
   <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true">
     <defs>
       <filter id="rough-filter" x="-10%" y="-10%" width="120%" height="120%">
@@ -432,7 +415,7 @@
 
   <div class="canvas-container">
     
-    <!-- TOP RIGHT: AzU Sci + Round Logo (MATCHING THE SKETCH) -->
+    <!-- TOP RIGHT: AzU Sci + Round Logo -->
     <header class="header-section">
       <div class="brand-container">
         
@@ -453,16 +436,16 @@
       </div>
     </header>
 
-    <!-- HORIZONTAL SKETCH DIVIDER LINE (MATCHING THE SKETCH) -->
+    <!-- HORIZONTAL SKETCH DIVIDER LINE -->
     <svg class="sketch-divider" viewBox="0 0 1000 20" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
       <path d="M 0 10 Q 150 5, 300 12 T 600 7 T 850 13 T 1000 9" stroke="#000000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
       <path d="M 5 11 Q 200 8, 450 12 T 750 9 T 995 11" stroke="#000000" stroke-width="2.5" opacity="0.8" stroke-linecap="round"/>
     </svg>
 
-    <!-- MAIN BODY: Left Handwritten Text + Right Arrow (MATCHING THE SKETCH) -->
+    <!-- MAIN BODY: Left Handwritten Text + Arrow Directly Underneath on Mobile -->
     <main class="main-grid">
       
-      <!-- Left Column: The handwritten text -->
+      <!-- Handwritten text lines -->
       <div class="sketch-text-column">
         <span class="sketch-line line-welcome">Welcome</span>
         <span class="sketch-line line-to">to</span>
@@ -471,32 +454,32 @@
         <span class="sketch-line line-patrol">patrol</span>
       </div>
 
-      <!-- Right Column: The hand-drawn arrow (Clickable & Interactive) -->
+      <!-- Arrow Button: Directly UNDER the text on mobile, NO EMOJIS -->
       <div class="sketch-action-column">
         
         <button class="arrow-button" onclick="openSketchModal()" aria-label="Enter Student Portal">
           
           <!-- Hand-drawn SVG Arrow pointing right -->
           <svg class="arrow-svg" viewBox="0 0 340 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- Arrow stem / shaft with crayon-like multi-stroke -->
+            <!-- Arrow stem / shaft with multi-stroke texture -->
             <path d="M 15 90 Q 70 87, 150 92 T 280 88" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M 20 92 Q 100 89, 180 91 T 275 89" stroke="#000000" stroke-width="3.5" stroke-linecap="round"/>
             
-            <!-- Arrow top wing / barb -->
+            <!-- Arrow top wing -->
             <path d="M 210 42 Q 245 65, 288 89" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M 215 45 Q 250 68, 285 87" stroke="#000000" stroke-width="3.5" stroke-linecap="round"/>
             
-            <!-- Arrow bottom wing / barb -->
+            <!-- Arrow bottom wing -->
             <path d="M 225 138 Q 255 115, 288 89" stroke="#000000" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M 228 134 Q 258 111, 285 91" stroke="#000000" stroke-width="3.5" stroke-linecap="round"/>
             
-            <!-- Charcoal scatter dots -->
+            <!-- Texture dots -->
             <circle cx="205" cy="38" r="2" fill="#000"/>
             <circle cx="220" cy="142" r="2" fill="#000"/>
             <circle cx="12" cy="91" r="1.5" fill="#000"/>
           </svg>
 
-          <span class="arrow-hint"> اضغط هنا للدخول </span>
+          <span class="arrow-hint">اضغط هنا للدخول</span>
         </button>
 
       </div>
@@ -505,7 +488,7 @@
 
   </div>
 
-  <!-- Interactive Hand-Drawn Sketch Modal (Student Portal Login) -->
+  <!-- Interactive Hand-Drawn Sketch Modal (NO EMOJIS) -->
   <div id="sketchModal" class="sketch-modal-overlay" onclick="handleOverlayClick(event)">
     <div class="sketch-modal">
       
@@ -517,7 +500,7 @@
       <form onsubmit="handleSketchLogin(event)">
         <div class="sketch-input-group">
           <label class="sketch-label">رقم القيد / كود الطالب:</label>
-          <input type="text" class="sketch-input" required placeholder="مثال: 20261054" dir="ltr" inputmode="numeric">
+          <input type="text" class="sketch-input" required placeholder="20261054" dir="ltr" inputmode="numeric">
         </div>
 
         <div class="sketch-input-group">
@@ -526,15 +509,15 @@
         </div>
 
         <button type="submit" class="sketch-submit-btn">
-          دخول البوابة ➜
+          دخول البوابة
         </button>
       </form>
 
       <div class="sketch-quick-links">
-        <div class="sketch-pill" onclick="alert('جاري فتح نتائج الامتحانات...')">📊 النتائج</div>
-        <div class="sketch-pill" onclick="alert('جاري فتح جدول المحاضرات...')">🗓️ الجدول</div>
-        <div class="sketch-pill" onclick="alert('جاري تحميل المقررات...')">📚 المقررات</div>
-        <div class="sketch-pill" onclick="alert('جاري فتح شؤون الطلاب...')">🏛️ الشؤون</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح نتائج الامتحانات...')">النتائج الدراسية</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح جدول المحاضرات...')">جدول المحاضرات</div>
+        <div class="sketch-pill" onclick="alert('جاري تحميل المقررات...')">المقررات والكتب</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح شؤون الطلاب...')">شؤون الطلاب</div>
       </div>
 
     </div>
@@ -557,7 +540,7 @@
 
     function handleSketchLogin(e) {
       e.preventDefault();
-      alert('🎉 مرحباً بك في بوابة طلاب كلية العلوم AzU Science Student Patrol!');
+      alert('مرحباً بك في بوابة طلاب كلية العلوم AzU Science Student Patrol');
       closeSketchModal();
     }
   </script>
