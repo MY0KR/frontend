@@ -253,7 +253,7 @@
       }
     }
 
-    /* Interactive Hand-Drawn Sketch Modal (NO EMOJIS) */
+    /* Interactive Hand-Drawn Sketch Modal */
     .sketch-modal-overlay {
       position: fixed;
       inset: 0;
@@ -454,7 +454,7 @@
         <span class="sketch-line line-patrol">patrol</span>
       </div>
 
-      <!-- Arrow Button: Directly UNDER the text on mobile, NO EMOJIS -->
+      <!-- Arrow Button: Directly UNDER the text on mobile WITH Emojis -->
       <div class="sketch-action-column">
         
         <button class="arrow-button" onclick="openSketchModal()" aria-label="Enter Student Portal">
@@ -479,7 +479,7 @@
             <circle cx="12" cy="91" r="1.5" fill="#000"/>
           </svg>
 
-          <span class="arrow-hint">اضغط هنا للدخول</span>
+          <span class="arrow-hint">👉 اضغط هنا للدخول 👈</span>
         </button>
 
       </div>
@@ -488,14 +488,14 @@
 
   </div>
 
-  <!-- Interactive Hand-Drawn Sketch Modal (NO EMOJIS) -->
+  <!-- Interactive Hand-Drawn Sketch Modal (WITH EMOJIS) -->
   <div id="sketchModal" class="sketch-modal-overlay" onclick="handleOverlayClick(event)">
     <div class="sketch-modal">
       
       <button class="modal-close-btn" onclick="closeSketchModal()">✕</button>
 
-      <div class="modal-title">AzU Sci Portal</div>
-      <div class="modal-subtitle">بوابة طلاب كلية العلوم - تسجيل الدخول</div>
+      <div class="modal-title">✨ AzU Sci Portal ✨</div>
+      <div class="modal-subtitle">🎓 بوابة طلاب كلية العلوم - تسجيل الدخول</div>
 
       <form onsubmit="handleSketchLogin(event)">
         <div class="sketch-input-group">
@@ -509,15 +509,15 @@
         </div>
 
         <button type="submit" class="sketch-submit-btn">
-          دخول البوابة
+          دخول البوابة 🚀
         </button>
       </form>
 
       <div class="sketch-quick-links">
-        <div class="sketch-pill" onclick="alert('جاري فتح نتائج الامتحانات...')">النتائج الدراسية</div>
-        <div class="sketch-pill" onclick="alert('جاري فتح جدول المحاضرات...')">جدول المحاضرات</div>
-        <div class="sketch-pill" onclick="alert('جاري تحميل المقررات...')">المقررات والكتب</div>
-        <div class="sketch-pill" onclick="alert('جاري فتح شؤون الطلاب...')">شؤون الطلاب</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح نتائج الامتحانات...')">📊 النتائج</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح جدول المحاضرات...')">🗓️ الجدول</div>
+        <div class="sketch-pill" onclick="alert('جاري تحميل المقررات...')">📚 المقررات</div>
+        <div class="sketch-pill" onclick="alert('جاري فتح شؤون الطلاب...')">🏛️ الشؤون</div>
       </div>
 
     </div>
@@ -540,7 +540,7 @@
 
     function handleSketchLogin(e) {
       e.preventDefault();
-      alert('مرحباً بك في بوابة طلاب كلية العلوم AzU Science Student Patrol');
+      alert('🎉 مرحباً بك في بوابة طلاب كلية العلوم AzU Science Student Patrol! ✨');
       closeSketchModal();
     }
   </script>
